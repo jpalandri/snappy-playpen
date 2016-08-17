@@ -1,0 +1,44 @@
+name:  pinta 
+version: "0.1" 
+summary: Simple Gtk# Paint Program
+description: |
+  Pinta is a free, open source program for drawing and image editing.
+      
+  Its goal is to provide users with a simple yet powerful way to draw and manipulate images on Linux, Mac, Windows, and *BSD.
+
+confinement: devmode  
+                     
+
+apps:  
+  pinta:  
+    command: pinta
+
+parts:
+    #  bison:
+    #    plugin: autotools
+    #    source: http://ftp.gnu.org/gnu/bison/bison-3.0.4.tar.gz
+    #
+    #  gtk-doc:
+    #    plugin: autotools
+    #    source: https://download.gnome.org/sources/gtk-doc/1.25/gtk-doc-1.25.tar.xz
+    #
+    #  gtk+:
+    #    after: [gtk-doc]
+    #    plugin: autotools
+    #    source: https://git.gnome.org/browse/gtk+/snapshot/gtk+-2.24.29.tar.xz
+    #
+    #  mono:
+    #    after: [gtk+]
+    #    plugin: autotools
+    #    source: http://download.mono-project.com/sources/mono/mono-4.4.2.8.tar.bz2
+    #
+    #
+    #  glib-sharp:
+    #    plugin: autotools
+    #    source: http://download.mono-project.com/sources/gtk-sharp212/gtk-sharp-2.12.26.tar.gz
+    #  
+
+  pinta:
+    plugin: autotools
+    source: https://github.com/PintaProject/Pinta/releases/download/1.6/pinta-1.6.tar.gz
+    build-packages: [mono-complete, gtk-sharp2, mono-reference-assemblies-4.0, mono-xbuild]
