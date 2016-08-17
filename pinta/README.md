@@ -4,15 +4,15 @@ This project creates a working snap of Pinta.
 
 To get this done, we need to do the following:
  - add custom launcher
- - 
+ - add plugs
 
 ## Current state
 
 Working features:
- - Compiles bison
+ - Builds
 
 Known issues:
-  - Can't compile Mono
+  - 
 
 TODO:
  -
