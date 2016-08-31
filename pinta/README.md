@@ -3,8 +3,7 @@
 This project creates a working snap of Pinta.
 
 To get this done, we need to do the following:
- - add custom launcher
- - add plugs
+ - 
 
 ## Current state
 
@@ -15,5 +14,6 @@ Known issues:
   - 
 
 TODO:
- -
+ - make it find Pinta.exe in the path
+ - get rid of devmode
  

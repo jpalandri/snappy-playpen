@@ -11,7 +11,9 @@ confinement: devmode
 
 apps:  
   pinta:  
-    command: pinta
+    command: launch-pinta
+  #  command: 
+  #    pinta
 
 parts:
     #  bison:
@@ -41,4 +43,11 @@ parts:
   pinta:
     plugin: autotools
     source: https://github.com/PintaProject/Pinta.git
-    build-packages: [mono-complete, gtk-sharp2,libmono-cairo4.0-cil,yelp-tools, libmono-posix4.0-cil, mono-reference-assemblies-4.0, mono-xbuild]
+    build-packages: [mono-complete, gtk-sharp2, libmono-cairo4.0-cil, yelp-tools, libmono-posix4.0-cil, mono-reference-assemblies-4.0, mono-xbuild]
+    stage-packages: [mono-runtime, gtk-sharp2]
+    after: [desktop-gtk3]
+  launch-pinta:
+    plugin: dump
+    source: .
+    organize:
+      launch-pinta: bin/launch-pinta

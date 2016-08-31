@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export MONO_PATH=$SNAP/usr/lib/mono/4.5:$MONO_PATH
+#export DYLD_LIBRARY_PATH=$SNAP/usr/lib/mono/4.5:$DYLD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=$SNAP/usr/lib/mono/:$LD_LIBRARY_PATH
+desktop-launch pinta
