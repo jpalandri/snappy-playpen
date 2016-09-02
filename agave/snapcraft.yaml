@@ -1,0 +1,37 @@
+name:  agave 
+version: "0.1" 
+summary: colorscheme designer for the GNOME desktop
+description: |
+   Agave is a very simple application for the GNOME desktop that
+    allows you to generate a variety of colorschemes from a single
+     starting color
+
+confinement: devmode  
+
+apps: 
+  agave:  
+    command: agave
+
+parts:
+  agave: 
+
+    source: http://download.gna.org/colorscheme/releases/agave-0.4.4.tar.gz 
+    # Get more information about plugins by running:
+    # snapcraft help plugins
+    # and more information about the available plugins by running:
+    # snapcraft list-plugins.
+    plugin: autotools
+    build-packages:
+        - gnome-doc-utils
+        - libgtkmm-2.4-dev
+        - libglademm-2.4-dev
+        - libgnomeui-dev
+        - libgconfmm-2.6-dev 
+          # Lines for yaml files (including description) should be under
+    # 80 characters. If more if needed, they should be
+    # broken up in multiple stenzas.
+    # For example, a list like [foo, bar, baz] should be broken up into:
+    # - foo
+    # - bar
+    # - baz
+    # as soon as the line is more than 80 characters.
