@@ -2,6 +2,6 @@
 
 export MONO_PATH=$SNAP/usr/lib/mono/4.5:$MONO_PATH
 
-export PATH=$SNAP/current/lib/pinta/:$PATH
+export PATH=$SNAP/lib/pinta/:$PATH
 
-desktop-launch pinta
+desktop-launch $SNAP/lib/pinta/Pinta.exe "$@"
